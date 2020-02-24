@@ -1,6 +1,6 @@
 export function manageFriends(state = {friends: []}, action){
   if(action.type === "ADD_FRIEND"){
-    return(  {...state,
+    return({...state,
             friends: [
               ...state.friends,
               action.friend
