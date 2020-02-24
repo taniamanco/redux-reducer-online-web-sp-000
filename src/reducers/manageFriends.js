@@ -1,6 +1,11 @@
 export function manageFriends(state = {friends: []}, action){
   if(action.type === "ADD_FRIEND"){
-    return({...state, friends: [...state.friends, action.friend]})
+    return(  {...state,
+            friends: [
+              ...state.friends,
+              action.friend
+            ]
+        })
   } else if(action.type === "REMOVE_FRIEND"){
     let removeFriend = state.friends.findIndex(friend => friend.id === action.id);
     return  (
