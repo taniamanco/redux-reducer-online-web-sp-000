@@ -6,7 +6,7 @@ export function manageFriends(state = {friends: []}, action){
               action.friend
             ]
         })
-  } else if(action.type === "REMOVE_FRIEND"){
+  } if(action.type === "REMOVE_FRIEND"){
     let removeFriend = state.friends.findIndex(friend => friend.id === action.id);
     return  (
         {...state,
