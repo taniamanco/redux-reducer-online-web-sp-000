@@ -5,6 +5,6 @@ export function manageFriends(state = {friends: []}, action){
     let removeFriend = state.friends.findIndex(friend => friend.id === action.id);
     return {...state, friend:[...state.friends.slice(0, removeFriend), ...state.friends.slice(removeFriend +1)]}
   } else {
-    
+    return state;
   }
 }
