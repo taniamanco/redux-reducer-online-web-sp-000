@@ -3,5 +3,7 @@ export function managePresents(state={numberOfPresents: 0}, action){
     return Object.assign({}, state, {
       numberOfPresents: state.numberOfPresents +1
     })
+  } else {
+    return state;
   }
 }
